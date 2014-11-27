@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,22 +17,104 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciao Gio!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxL-bf-WDK">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y94-fy-fb2" userLabel="passcodeField">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" keyboardAppearance="alert" returnKeyType="go" secureTextEntry="YES"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="322" width="568" height="30"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="b8y-id-rbK"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter passcode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxL-bf-WDK">
                                 <rect key="frame" x="264" y="289" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="240" y="293" width="120" height="20.5"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="hxL-bf-WDK" secondAttribute="centerX" id="UMt-8X-Z5K"/>
-                            <constraint firstAttribute="centerY" secondItem="hxL-bf-WDK" secondAttribute="centerY" id="VLK-EZ-mNs"/>
+                            <constraint firstItem="Y94-fy-fb2" firstAttribute="top" secondItem="hxL-bf-WDK" secondAttribute="bottom" constant="10" id="GI5-cf-XVr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y94-fy-fb2" secondAttribute="trailing" id="N9c-do-w6F"/>
+                            <constraint firstAttribute="centerX" secondItem="hxL-bf-WDK" secondAttribute="centerX" id="NTi-NN-VxD"/>
+                            <constraint firstItem="Y94-fy-fb2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="iyE-NL-lM4"/>
+                            <constraint firstAttribute="centerX" secondItem="Y94-fy-fb2" secondAttribute="centerX" id="wpB-rj-pjF"/>
+                            <constraint firstAttribute="centerY" secondItem="Y94-fy-fb2" secondAttribute="centerY" id="xbQ-4L-oEJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Y94-fy-fb2"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="NTi-NN-VxD"/>
+                                <exclude reference="GI5-cf-XVr"/>
+                                <exclude reference="N9c-do-w6F"/>
+                                <exclude reference="iyE-NL-lM4"/>
+                                <exclude reference="wpB-rj-pjF"/>
+                                <exclude reference="xbQ-4L-oEJ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="Y94-fy-fb2"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="NTi-NN-VxD"/>
+                                <include reference="GI5-cf-XVr"/>
+                                <include reference="N9c-do-w6F"/>
+                                <include reference="iyE-NL-lM4"/>
+                                <include reference="wpB-rj-pjF"/>
+                                <include reference="xbQ-4L-oEJ"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="passcodeTextfield" destination="Y94-fy-fb2" id="iab-g9-lNr"/>
+                        <segue destination="uw1-Dw-4Hc" kind="show" identifier="authenticatedSegueId" id="nRE-a4-Jba"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="295" y="123.75"/>
+        </scene>
+        <!--Note PadTVC-->
+        <scene sceneID="oXZ-Zm-FUI">
+            <objects>
+                <tableViewController id="uw1-Dw-4Hc" customClass="NotePadTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mnY-c9-Z63">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eht-ue-m0o">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eht-ue-m0o" id="tp7-Xo-RoB">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uw1-Dw-4Hc" id="ObT-G3-tOt"/>
+                            <outlet property="delegate" destination="uw1-Dw-4Hc" id="ohL-lo-lkm"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="add" id="we8-gO-aeI"/>
+                    </toolbarItems>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VH5-ap-YuR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1194" y="123.75"/>
         </scene>
     </scenes>
 </document>

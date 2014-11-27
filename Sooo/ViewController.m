@@ -24,4 +24,14 @@
 	// Dispose of any resources that can be recreated.
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+	if ([textField.text isEqualToString:@"GioMacs"]) {
+		NSLog(@"Ok entra");
+	} else {
+		NSLog(@"Errore");
+	}
+	
+	return YES;
+}
+
 @end

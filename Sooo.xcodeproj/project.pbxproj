@@ -14,6 +14,7 @@
 		0D973BEC1A26E3C100828D64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D973BEB1A26E3C100828D64 /* Images.xcassets */; };
 		0D973BEF1A26E3C100828D64 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D973BED1A26E3C100828D64 /* LaunchScreen.xib */; };
 		0D973BFB1A26E3C100828D64 /* SoooTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D973BFA1A26E3C100828D64 /* SoooTests.m */; };
+		0DF5E6CE1A26EE8F00466E4F /* NotePadTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF5E6CD1A26EE8F00466E4F /* NotePadTVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		0D973BF41A26E3C100828D64 /* SoooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D973BF91A26E3C100828D64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D973BFA1A26E3C100828D64 /* SoooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoooTests.m; sourceTree = "<group>"; };
+		0DF5E6CC1A26EE8F00466E4F /* NotePadTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotePadTVC.h; sourceTree = "<group>"; };
+		0DF5E6CD1A26EE8F00466E4F /* NotePadTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotePadTVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				0D973BEB1A26E3C100828D64 /* Images.xcassets */,
 				0D973BED1A26E3C100828D64 /* LaunchScreen.xib */,
 				0D973BDE1A26E3C100828D64 /* Supporting Files */,
+				0DF5E6CC1A26EE8F00466E4F /* NotePadTVC.h */,
+				0DF5E6CD1A26EE8F00466E4F /* NotePadTVC.m */,
 			);
 			path = Sooo;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				0D973BE71A26E3C100828D64 /* ViewController.m in Sources */,
 				0D973BE41A26E3C100828D64 /* AppDelegate.m in Sources */,
 				0D973BE11A26E3C100828D64 /* main.m in Sources */,
+				0DF5E6CE1A26EE8F00466E4F /* NotePadTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +418,7 @@
 				0D973C001A26E3C100828D64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D973C011A26E3C100828D64 /* Build configuration list for PBXNativeTarget "SoooTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				0D973C031A26E3C100828D64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
