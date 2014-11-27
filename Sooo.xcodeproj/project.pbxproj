@@ -15,6 +15,7 @@
 		0D973BEF1A26E3C100828D64 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D973BED1A26E3C100828D64 /* LaunchScreen.xib */; };
 		0D973BFB1A26E3C100828D64 /* SoooTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D973BFA1A26E3C100828D64 /* SoooTests.m */; };
 		0DF5E6CE1A26EE8F00466E4F /* NotePadTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF5E6CD1A26EE8F00466E4F /* NotePadTVC.m */; };
+		0DF5E6D11A26FA4C00466E4F /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF5E6D01A26FA4C00466E4F /* NoteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		0D973BFA1A26E3C100828D64 /* SoooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoooTests.m; sourceTree = "<group>"; };
 		0DF5E6CC1A26EE8F00466E4F /* NotePadTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotePadTVC.h; sourceTree = "<group>"; };
 		0DF5E6CD1A26EE8F00466E4F /* NotePadTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotePadTVC.m; sourceTree = "<group>"; };
+		0DF5E6CF1A26FA4C00466E4F /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
+		0DF5E6D01A26FA4C00466E4F /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				0D973BDE1A26E3C100828D64 /* Supporting Files */,
 				0DF5E6CC1A26EE8F00466E4F /* NotePadTVC.h */,
 				0DF5E6CD1A26EE8F00466E4F /* NotePadTVC.m */,
+				0DF5E6CF1A26FA4C00466E4F /* NoteViewController.h */,
+				0DF5E6D01A26FA4C00466E4F /* NoteViewController.m */,
 			);
 			path = Sooo;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 				0D973BE71A26E3C100828D64 /* ViewController.m in Sources */,
 				0D973BE41A26E3C100828D64 /* AppDelegate.m in Sources */,
 				0D973BE11A26E3C100828D64 /* main.m in Sources */,
+				0DF5E6D11A26FA4C00466E4F /* NoteViewController.m in Sources */,
 				0DF5E6CE1A26EE8F00466E4F /* NotePadTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

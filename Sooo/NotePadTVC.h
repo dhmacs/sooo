@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NotePadTVC : UITableViewController
+@interface NotePadTVC : UITableViewController 
+
+@property (nonatomic, strong) NSString *example;
+
 
 @end
